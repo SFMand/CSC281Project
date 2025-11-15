@@ -6,11 +6,11 @@ public class Main {
         boolean end = false;
 
         while (!end) {
-            System.out.println("Enter Base Number:");
+            System.out.println("Enter Base:");
             long b = console.nextLong();
             System.out.println("Enter Exponent:");
             long n = console.nextLong();
-            System.out.println("Enter modulus:");
+            System.out.println("Enter Modulus:");
             long m = console.nextLong();
 
             BinaryModularExpo bme = new BinaryModularExpo(b, n, m);

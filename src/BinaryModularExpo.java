@@ -20,8 +20,7 @@ public class BinaryModularExpo {
         long result = 1; // Intializied to 1 because (base)^0 = 1, and 1 % any positive integer = 1.
 
         /*
-         * This is the first step, we know (a * b) % m is congruent to ((a % m) * (b %
-         * m)) % m,
+         * This is the first step, we know (a * b) % m is congruent to ((a % m) * (b % m)) % m,
          * because of this property, (base ^ exponentVal) % modVal is congruent to
          * ((base % modVal) ^ exponent) % modVal.
          */
@@ -35,9 +34,10 @@ public class BinaryModularExpo {
          * exponent, we can get the value of the LSB, then shift right once to move a
          * new bit to LSB, then repeat until all 1s are shifted out.
          */
+
+         // For example: exponentVal = 5 (101), 101 & 001 = 001 = integer 1, shift right,
+         // 010 & 001 = 000, shift right, 001 & 001 = 001, shift right, 000 no 1s left in exponent
         while (exponentVal >= 1) {
-            // For example: exponentVal = 5 (101), 101 & 001 = 001 = integer 1, shift right,
-             // 010 & 001 = 000, shift right, 001 & 001 = 001, shift right, 000 no 1s left in exponent
             if ((exponentVal & 1) == 1) {  
                 result = (result * basePower) % modVal;
             }
