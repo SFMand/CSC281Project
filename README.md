@@ -23,5 +23,6 @@ Generative AI, specifically Gemini 2.5, was used to only design and stylize this
 ### Prerequisite
 - any JDK (Version 8 or higher)
 ### Running the algorithm
-1. Open newly extracted folder in an IDE
+1. Open newly extracted folder in an IDE (Eclipse/Intellij)
+*NOTE: For VSCode, a java extension is recommeneded
 2. find src/Main.java and run
